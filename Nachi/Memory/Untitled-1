@@ -1,0 +1,12 @@
+One of the most important factors regarding agriculture is nutrient concentration. This commonly refers to the Big Three: Nitrogen, Phosphorus, and Potassium (abbreviated NPK). In order to increase the nutrient density of the soil, farmers often add external fertilizer to their soil. Unfortunately, the dosage of the fertilizer is largely guess work. If too much fertilizer is added, it can cause devastating enviornmental and ecological effects, like eutrophication.
+	
+We believe that the Electrical Conductivity (EC) of the soil can be an accurate metric of the NPK of the soil, when combined with other metrics like soil moisture, temperature, and pH. Essentially, NPK exists in the soil in the form of various compounds — primarily salts and carbonates. When the soil moisture is adaquate, many of these compounds dissolve into ions. Thus, measuring the EC of the soil and combining that information with the moisture and temperature of the soil may yield an accurate metric of the soil NPK. Additionally, pH is appears to be a promising avenue of determining which compounds are in the soil.
+
+
+One of the goals of MUDBUG is to produce low-cost sensing systems. For this reason, we decided to use a standard American AC power plug as our probe. These are cheap, widely available, and can easily be replaced if needed. The main concern of the probe is corrosion, but any noncorrosive solution will increase the cost of the probe. Repurposing the power cord of discarded electronic appliances is also great for the enviornment.
+
+The EC sensor utilizes the voltage divider principle to determine the voltage drop across the leads of the probe. From the voltage drop, the resistance of the soil — and ultimately its conductivity — may be computed. 
+
+Below is a photo of the probe which will be embedded in the soil, a sketch of the circuit diagram, and oscilloscope images demonstrating the voltage drop (purple signal) experienced when the probe is submerged in water.
+
+

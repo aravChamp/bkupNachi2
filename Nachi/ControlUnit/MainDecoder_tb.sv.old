@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// Main Decoder TESTBENCH module
+//
+// A testbench module for the Main Decoder
+//
+// module: MainDecoder_tb
+// hdl: Verilog
+//
+// author: Arav Sharma <arav.sharma@cooper.edu>
+//
+///////////////////////////////////////////////////////////////////////////////
+
+`timescale 1ns/100ps
+
+`include "./MainDecoder.sv"
+
+module MainDecoder_tb;
+
+   reg [5:0] Op; 
+   
+   wire [1:0] aluOp;
+   wire memToReg, memWrite, branch, aluSource, rst, regWrite, jump;
+   
+   wire [8:0] ctrl;
+   
+   //
+   // ---------------- INITIALIZE TEST BENCH ----------------
+   //
+   
+   initial
+   
+       $monitor ("Op = %b,  %b, %b, %b, %b, %b, %b, %b, ctrl = %d", Op, memToReg, memWrite, branch, aluSource, rst, regWrite, jump, aluOp, ctrl);
+
+   initial
+   begin
+   
+   	
+       #10
+       Op = 6'b000000;
+	   
+	   #10
+       Op = 6'b100011;
+	   
+	   #10
+       Op = 6'b101011;
+	   
+	   #10
+       Op = 6'b000100;
+	   
+	   #10
+       Op = 6'b001000;
+	   
+	   #10
+       Op = 6'b000010;
+	   
+    end
+   //
+   // ---------------- INSTANTIATE UNIT UNDER TEST (UUT) ----------------
+   //
+   MainDecoder uut (.Op(Op), .memToReg(memToReg), .memWrite(memWrite), .branch(branch), .aluSource(aluSource), .rst(rest), .regWrite(regWrite), .jump(jump), .aluOp(aluOp), .ctrl(ctrl));
+
+endmodule
+
+// `endif // MainDecoder_tb
